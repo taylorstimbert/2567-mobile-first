@@ -1,5 +1,30 @@
 @charset "UTF-8";
 /* CSS Document */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+        1.1 - Headings
+        1.2 - Body Copy
+        1.3 - Buttons
+        1.4 - Forms
+        1.5 - Lists
+        1.6 - Tables
+2.0 - Navigation Menus
+        3.1 - Main Menu
+        3.2 - Sub Menu
+        3.3 - Footer Menu
+3.0 - Content
+        3.1 - Site Structure (Site Header, Advertisement, Site Footer)
+        3.2 - Section Name
+        3.3 - Section Name
+4.0 - Media
+5.0 - Utility
+        5.1 - Background Colors
+        5.2 - Text Colors
+        5.3 - Text Sizes
+        5.4 - Alignments
+--------------------------------------------------------------*/
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
@@ -10,8 +35,7 @@
 }
 
 .wrapper {
-	background-color: black;
-	width: 85%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -25,11 +49,6 @@ img {
 	max-width: 100%;
 }
 
-figcaption {
-	color:white;
-}
-
-/*targets any class that starts with col-whatever*/
 [class*='col-'] {
 	float: left;
 	padding-right: 20px; /*use px because gutter should always be the same size*/
@@ -157,25 +176,92 @@ figcaption {
 }
 
 
-/*background color and height are just so we can see it in our browser*/
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
 
-.coral, .beige {
-	height: 50px;
+/* ----- 1.1 - Headings ----- */
+
+/* ----- 1.2 - Body Copy ----- */
+
+/* ----- 1.3 - Buttons ----- */
+
+/* ----- 1.4 - Forms ----- */
+
+/* ----- 1.5 - Lists ----- */
+
+/* ----- 1.6 - Tables ----- */
+
+
+/*--------------------------------------------------------------
+2.0 - NAVIGATION MENUS
+-------------------------------------------------------------- */
+
+/* ----- 2.1 - Main Menu ----- */
+
+/* ----- 2.2 - Sub Menu ----- */
+
+/* ----- 2.3 - Footer Menu ----- */
+
+
+/*--------------------------------------------------------------
+3.0 - CONTENT
+-------------------------------------------------------------- */
+
+/* ----- 3.1 - Site Structure (Header, Advertisement, Site Footer) ----- */
+
+
+/*--------------------------------------------------------------
+4.0 - MEDIA
+-------------------------------------------------------------- */
+
+
+/*--------------------------------------------------------------
+5.0 - UTILITY
+-------------------------------------------------------------- */
+
+/* ----- 5.1 - Background Colors ----- */
+.teal {
+	background-color: #49bdaa;
 }
+/* ----- 5.2 - Text Sizes ----- */
 
-.coral {
-	background-color: coral;
-}
+/* ----- 5.3 - Alignments ----- */
 
-.beige {
-	background-color: papayawhip;
-}
 
-/*if you want to apply a bacground color to a column, you need to place a div inside of the column and apply the background color to that child element*/
 
-@media (max-width: 480px) {
-/*no more than 5 columns*/
-	.wrapper {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+	/*.wrapper {
 		width: 95%;
 	}
 	
@@ -205,6 +291,7 @@ figcaption {
 	
 	.col-1-10 {
 		width: 20%;
-	}
+	} */
 }
+
 
