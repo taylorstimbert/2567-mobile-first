@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Assignment 1</title>
@@ -9,38 +10,37 @@
 
 <body id="top">
 
-<!-- do i keep the old stuff or...?-->
 <!-- can the hero be a section instead of div?-->
-<header class="teal">
-
-	<nav>
-    	<div class="wrapper">
-	    	<h1><a href="#top"><img src="img/logo.png" alt="logo for oh! written in yellow bubble letters"></a></h1>
+<header class="bg-teal">
+    <div class="row wrapper">
+        <div class="col-1-10"><h1><a href="#top"><img src="img/logo.png" alt="logo for oh! written in yellow bubble letters"></a></h1></div><!--um?-->
+        <nav class="col-5-12 f-right">
             <ul>
-            	<li><a href="#top">Home</a></li>
+                <li><a href="#top">Home</a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
+        </nav>
+    </div>
+    <div class="hero row wrapper">
+    	<div class="col-7-12 f-right">
+            <!-- can't wrap in header tag b/c already inside of a header?-->
+            <h2>We Design Things</h2>
+            <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu. Aliquid delenit an pri, ad mea nostrud nominavi menandri.</p>
+            <p class="button"><a href="#work"> <!--Is this the right link/location?--> Hire Us</a></p>
+            <p class="button"><a href="#work">View Work</a></p>
         </div>
-    </nav>
-    
-    <div class="hero wrapper">
-		<!-- can't wrap in header tag b/c already inside of a header?-->
-        <h2>We Design Things</h2>
-        <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu. Aliquid delenit an pri, ad mea nostrud nominavi menandri.</p>
-        <p class="button"><a href="#work"> <!--Is this the right link/location?--> Hire Us</a></p>
-        <p class="button"><a href="#work">View Work</a></p>
     </div>
     
 </header>
 
-<section id="work">
-	<div class="wrapper">
+<section id="work" class="bg-yllw">
+	<div class="row wrapper">
     	<header>
         	<h2>Our Work</h2>
         </header>
         
-    	<section>
+    	<section class="col-1-4">
         	<header>
             	<img src="img/icon-print.png" alt="">
                 <h3>Print Design</h3>
@@ -48,7 +48,7 @@
             <p>Nam purto solet eu vero mediocrem hendrerit ad ius.</p>
         </section>
         
-        <section>
+        <section class="col-1-4">
         	<header>
             	<img src="img/icon-interact.png" alt="">
                 <h3>Interactive</h3>
@@ -56,7 +56,7 @@
             <p>Vix ad posse empetus, vis id quem novis suscipiantur. His an assum onmium periculis.</p>
         </section>
         
-        <section>
+        <section class="col-1-4">
         	<header>
             	<img src="img/icon-brand.png" alt="">
                 <h3>Branding</h3>
@@ -64,7 +64,7 @@
             <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu.</p>
         </section>
         
-        <section>
+        <section class="col-1-4">
         	<header>
             	<img src="img/icon-app.png" alt="">
             	<h3>App Design</h3>
@@ -75,6 +75,100 @@
     </div>
 </section>
 
+<section id="about">
+	<div class="wrapper">
+    	<header class="col-2-3 block-cntr">
+        	<h2>Our Team</h2>
+            <p>Ea expetenda prodesset cum, tibique principes laboramus id pro. Ei dolorem facilis volutpat sed, eu pro dicta iracundia scripserit.</p>
+        </header>
+
+    <!--how do i place portraits/images in these sections?-->
+    <!--where should my wrappers go?-->
+    <section class="row">
+    	<div class="col-1-2 bg-black" style="height:125px;"></div><!--image-->
+        <div class="bg-teal col-1-2 f-right">
+        	<div class="block-cntr col-1-3">
+                <header>
+                    <h3>John Doe</h3>
+                </header>
+                <ul class="sprite">
+                    <li><a href="http://www.twitter.com" target="_blank"></a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"></a></li>
+                </ul>
+                <p>Nam purto solet eu, vero mediocrem hendrerit ad ius.</p>
+        	</div>
+        </div>
+    </section>
+    
+    <section class="row">
+        <div class="bg-yllw col-1-2">
+        	<div class="block-cntr col-1-3">
+                <header>
+                    <h3>Jane Doe</h3>
+                </header>
+                <ul class="sprite">
+                    <li><a href="http://www.twitter.com" target="_blank"></a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"></a></li>
+                </ul>
+                <p>Vix ad posse impetus, vis id quem nobis suscipiantur. His an assum omnium periculis.</p>
+    		</div>
+        </div>
+        <div class="col-1-2 bg-black f-right" style="height:179px;"></div><!--image-->
+    </section>     
+ 
+    <section class="row">
+    	<div class="col-1-2 bg-black" style="height:161px;"></div><!--image-->
+        <div class="bg-teal col-1-2 f-right">
+        	<div class="block-cntr col-1-3">
+                <header>
+                    <h3>Jon Smith</h3>
+                </header>
+                <ul class="sprite">
+                    <li><a href="http://www.twitter.com" target="_blank"></a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"></a></li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu.</p>
+        	</div>
+        </div>
+    </section>
+ 
+    <section class="row">
+        <div class="bg-yllw col-1-2">
+        	<div class="block-cntr col-1-3">
+                <header>
+                    <h3>Mary Smith</h3>
+                </header>
+                <ul class="sprite">
+                    <li><a href="http://www.twitter.com" target="_blank"></a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"></a></li>
+                </ul>
+                <p>VExerci antiopam constituam per ex, pro odio enim te, ut eam quidam docendi ancillae. Id nisl appareat mel.</p>
+    		</div>
+        </div>
+        <div class="col-1-2 bg-black f-right" style="height:179px;"></div><!--image-->
+    </section>     
+        
+        <p>Vel singulis posidonium ea, primis possim voluptatum ei has. Ut usu sale modus liberavisse. Eos reque mnesarchum ea, ea tamquam disputando has.</p> 
+	</div>
+</section>
+
+<footer class="bg-teal">
+	<div class="row wrapper">
+    	<div class="col-1-6"><h4><a href="#top"><img src="img/logo.png" alt="">logo for oh! written in yellow bubble letters</a></h4></div>
+        <div>
+        	<ul>
+            	<li><a href="#top">Home</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <!--address tag?-->
+        <div class="f-right">
+            <p>6041 Old York Road</p>
+            <p>Dekalb, IL 60115</p>
+    	</div>
+    </div>
+</footer>
 
 </body>
 </html>
