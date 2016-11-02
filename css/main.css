@@ -51,8 +51,8 @@ img {
 
 [class*='col-'] {
 	float: left;
-	padding-right: 20px; /*use px because gutter should always be the same size*/
-	margin-bottom: 20px;
+	padding-right: 25px; /*use px because gutter should always be the same size*/
+	margin-bottom: 25px;
 }
 
 [class*='col-']:last-of-type {
@@ -175,29 +175,107 @@ img {
 	width: 58.33%;
 }
 
+/* don't forget to combine margin: 0; */
 
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
+body {
+	font-size: 16pt;
+}
+
+.bg-yllw, .bg-teal {
+	color: #f2f2f2;
+}
+
+.bg-lite {
+	color: #49BDAA;
+}
+
+h2, h3, header p, strong {
+	font-family: 'Roboto Slab', serif;
+}
+
+h2, strong {	
+	font-weight: 700;
+}
+
+h3, p {
+	letter-spacing: 0.5px;
+}
 
 /* ----- 1.1 - Headings ----- */
+h1 {
+	margin: 0;
+}
 
+h2 {
+	margin: 0 0 2.5rem 0;
+}
+
+h2, strong {
+	font-size: 4rem;
+	line-height: 4rem;
+}
+
+h2, strong, h3 {
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+h3 {
+	font-size: 1.75rem;
+	margin: 0 0 2rem 0;
+}
 /* ----- 1.2 - Body Copy ----- */
+#work, #about {
+	text-align: center;
+}
+
+p {
+	margin: 2rem 0 0 0;
+	font-size: 1rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+header p, #about>.wrapper>p {
+	font-size: 1.25rem;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+	line-height: 2rem;
+	margin: 2rem 0;
+	letter-spacing: 0;
+}
+
+#about>.wrapper>header p {
+	padding-bottom: 2rem;
+}
 
 /* ----- 1.3 - Buttons ----- */
-
-/* ----- 1.4 - Forms ----- */
-
+.button {
+	margin: 0;
+}
 /* ----- 1.5 - Lists ----- */
+.hero p.button, li {
+	display: inline-block;
+}
 
-/* ----- 1.6 - Tables ----- */
-
-
+ul {
+	margin: 0;
+	padding: 0;
+}
 /*--------------------------------------------------------------
 2.0 - NAVIGATION MENUS
 -------------------------------------------------------------- */
 
 /* ----- 2.1 - Main Menu ----- */
+nav ul {
+	text-align: right;
+}
+
+nav {
+	margin: 0;
+}
 
 /* ----- 2.2 - Sub Menu ----- */
 
@@ -210,23 +288,57 @@ img {
 
 /* ----- 3.1 - Site Structure (Header, Advertisement, Site Footer) ----- */
 
+body>header {
+	padding: 1.5rem 0 4rem 0;
+}
+
+body>section {
+	padding: 5em 0;
+}
+
+section section .bg-teal, section section .bg-yllw{
+	padding: 4rem 0;
+	margin: 0;
+}
 
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
-
+#work img {
+	margin-top: 2rem;
+}
 
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
 
 /* ----- 5.1 - Background Colors ----- */
-.teal {
-	background-color: #49bdaa;
+.bg-teal {
+	background-color: #49BDAA;
+}
+
+.bg-yllw {
+	background-color: #F6BD46;
+}
+
+.bg-black {
+	background-color: black;
+}
+
+.bg-lite {
+	background-color: #F2F2F2;
 }
 /* ----- 5.2 - Text Sizes ----- */
 
 /* ----- 5.3 - Alignments ----- */
+.block-cntr {
+	float: none;
+	margin: 0 auto;
+}
+
+.f-right {
+	float: right;
+}
 
 
 
@@ -259,8 +371,7 @@ img {
 
 
 
-
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
 	/*.wrapper {
 		width: 95%;
 	}
