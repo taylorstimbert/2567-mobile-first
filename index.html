@@ -10,15 +10,18 @@
 </head>
 
 <body id="top">
-
+<!--Should btn class be on anchor or containing element?
+	If it is on the anchor, how can I target ul's containing buttons (for diplay: inline-block;) and set up a class for button scenarios that future updates need to use?-->
+    
+<!--target for external links-->
 <header class="bg-teal">
     <div class="row wrapper">
         <div class="col-1-10"><h1><a href="#top"><img src="img/logo.png" alt="logo for oh! written in yellow bubble letters"></a></h1></div><!--um?-->
-        <nav class="col-5-12 f-right">
+        <nav class="col-7-12 f-right">
             <ul>
-                <li><a href="#top">Home</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#top" class="btn btn-hllw">Home</a></li>
+                <li><a href="#work" class="btn btn-hllw">Work</a></li>
+                <li><a href="#about" class="btn btn-hllw">About</a></li>
             </ul>
         </nav>
     </div>
@@ -27,8 +30,8 @@
             <!-- can't wrap in header tag b/c already inside of a header?-->
             <p><strong>We Design Things</strong></p>
             <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu. Aliquid delenit an pri, ad mea nostrud nominavi menandri.</p>
-            <p class="button"><a href="#work"> <!--Is this the right link/location?--> Hire Us</a></p>
-            <p class="button"><a href="#work">View Work</a></p>
+            <p><a href="#work" class="btn btn-solid"> <!--Is this the right link/location?--> Hire Us</a></p>
+            <p><a href="#work" class="btn btn-solid">View Work</a></p>
         </div>
     </div>
 </header>
@@ -49,7 +52,7 @@
         
         <section class="col-1-4">
         	<header>
-            	<img src="img/icon-interact.png" alt="">
+            	<img src="img/icon-interactive.png" alt="">
                 <h3>Interactive</h3>
             </header>
             <p>Vix ad posse empetus, vis id quem novis suscipiantur. His an assum onmium periculis.</p>
@@ -149,14 +152,14 @@
 
 <footer class="bg-teal">
 	<div class="row wrapper">
-    	<div class="col-1-6"><h4><a href="#top"><img src="img/logo.png" alt="">logo for oh! written in yellow bubble letters</a></h4></div>
-        <div>
+    	<div class="col-1-6"><h4><a href="#top"><img src="img/logo.png" alt="logo for oh! written in yellow bubble letters"></a></h4></div>
+        <nav class="block-cntr"><!--how do i have this centered in a row?-->
         	<ul>
-            	<li><a href="#top">Home</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#about">About</a></li>
+            	<li><a href="#top" class="btn">Home</a></li>
+                <li><a href="#work" class="btn">Work</a></li>
+                <li><a href="#about" class="btn">About</a></li>
             </ul>
-        </div>
+        </nav>
         <!--address tag?-->
         <div class="f-right">
             <p>6041 Old York Road</p>
