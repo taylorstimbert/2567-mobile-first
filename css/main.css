@@ -230,6 +230,10 @@ h3 {
 	font-size: 1.75rem;
 	margin: 0 0 2rem 0;
 }
+
+h4 {
+	margin: -35px 0;
+}
 /* ----- 1.2 - Body Copy ----- */
 #work, #about {
 	text-align: center;
@@ -355,17 +359,24 @@ footer p {
 	margin: 0;
 }
 
+footer {
+	padding: 80px 0;
+}
+
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
 #work img {
-	margin-top: 2rem;
+	margin-bottom: 20px;
+	margin-top: 40px;
+	display: block;
 }
 
 #about .image:first-of-type {
 	background-image: url(../img/john-doe.jpg);
 	background-repeat: no-repeat;
 	background-size: cover; 
+	height: 300px /*temporary*/
 }
 
 #about .image:nth-of-type(2) {
@@ -449,15 +460,12 @@ footer p {
 		width: 90%;
 	}
 	
-	.col-1-4 {
-		width: 50%;
-	}
 	
 	.col-1-4:nth-child(2), .col-1-7, .col-1-6:nth-child(3), .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8) {
 		padding-right: 0;
 	}
 	
-	.col-1-7, .col-1-11 {
+	.col-1-7, .col-1-11, .col-1-4, .col-1-2 {
 		width: 100%;
 	}
 	
@@ -476,6 +484,7 @@ footer p {
 	.col-1-10 {
 		width: 20%;
 	}
+	
 	
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
@@ -523,6 +532,37 @@ nav li:last-of-type {
 /* ----- 2.2 - Sub Menu ----- */
 
 /* ----- 2.3 - Footer Menu ----- */
+
+
+/*--------------------------------------------------------------
+3.0 - CONTENT
+-------------------------------------------------------------- */	
+#work img {
+	float: left;
+}
+
+#work h3 {
+	float: left;
+}
+
+#about section:nth-child(odd) {
+	background-color: #F6BD46;
+}
+
+#about section:nth-child(even) {
+	background-color: #49BDAA;
+}
+
+#about section {
+	margin-top: 20px;
+}
+
+.image {
+	width: 50%;
+	float: none;
+	margin: 0 auto;
+}
+
 
 
 }
