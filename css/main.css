@@ -1,37 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
-/* Flex Notes
-
-Change display of flex class
-
-.flex {
-	display: -webkit-flex;
-	display: -o-flex;
-	display: -ms-flex;
-	display: -moz-flex;
-	display: flex;
-	overflow: hidden;
-}
-
-Target all of the children within flex class
-
-.flex [class*='col-'] {
-	flex: 1;
-}
-
-.bg-blue {
-	background-color: blue;
-	color: white;
-	padding: 10px;
-	height: 100%;
-}
-
-
-
-*/
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -58,6 +27,9 @@ Target all of the children within flex class
         5.4 - Alignments
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+0.0 - FRAMEWORK
+-------------------------------------------------------------- */
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -207,7 +179,6 @@ img {
 	width: 58.33%;
 }
 
-/* don't forget to combine margin: 0; */
 
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
@@ -267,7 +238,7 @@ h4 {
 	margin: -35px 0;
 }
 /* ----- 1.2 - Body Copy ----- */
-#work, #about {
+#work, #about, footer nav {
 	text-align: center;
 }
 
@@ -275,12 +246,12 @@ p {
 	margin: 2rem 0 0 0;
 	font-size: 1rem;
 	font-weight: 400;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1); /*i tried to minimize these minor shifts, but i can't find their individual properties*/
 }
 
 header p, #about>.wrapper>p {
 	font-size: 1.25rem;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /*i tried to minimize these minor shifts, but i can't find their individual properties*/
 	line-height: 2rem;
 	margin: 2rem 0;
 	letter-spacing: 0;
@@ -292,7 +263,6 @@ header p, #about>.wrapper>p {
 
 /* ----- 1.3 - Buttons ----- */
 .btn {
-	margin: 0;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: inherit;
@@ -301,32 +271,30 @@ header p, #about>.wrapper>p {
 	-moz-border-radius: 15px;
 	-o-border-radius: 15px;
 	border-radius: 15px;
-		padding: 0.25rem 1.25rem;
+	padding: 0.25rem 1.25rem;
 
 }
 
 .btn-hllw {
 	font-size: 1rem;
-	border: 4px solid #F6BD46;
-
 }
 
 .btn-solid {
 	font-size: 1.1875rem;
-	border: 4px solid #F6BD46;
-
 
 }
 
 .btn-hllw, .btn-solid:hover {
-	border: 4px solid #F6BD46;
 	background-color: transparent;
 
 }
 
+.btn-hllw, .btn-solid, .btn-solid:hover {
+	border: 4px solid #F6BD46;
+}
+
 /* ----- 1.5 - Lists ----- */
 ul {
-	margin: 0;
 	padding: 0;
 }
 
@@ -356,16 +324,10 @@ nav li {
 	margin-right: 5rem;
 }
 
-nav li:last-of-type {
-	margin: 0;
-}
 
 /* ----- 2.2 - Sub Menu ----- */
 
 /* ----- 2.3 - Footer Menu ----- */
-footer nav {
-	text-align: center;
-}
 
 
 /*--------------------------------------------------------------
@@ -378,20 +340,15 @@ body>header {
 	padding: 1.5rem 0 4rem 0;
 }
 
-.hero .f-right {
-	margin: 0;
-}
-
 body>section {
 	padding: 5em 0;
 }
 
 section section .bg-teal, section section .bg-yllw {
 	padding: 4rem 0;
-	margin: 0;
 }
 
-footer p {
+.btn, .image, footer p, .hero .f-right, nav li:last-of-type, section section .bg-teal, section section .bg-yllw, ul {
 	margin: 0;
 }
 
@@ -410,8 +367,11 @@ footer {
 }
 
 .image {
-	margin: 0;	
 	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
 	background-size: cover; 
 	background-position: center;
 }
@@ -431,6 +391,36 @@ footer {
 #about .row:nth-of-type(4) .image {
 	background-image: url(../img/mary-smith.jpg)
 }
+
+.sprite li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.sprite li a {
+	height: 50px;
+	width: 50px;
+	display: block;
+}
+
+.sprite li:first-child a {
+	background: url(../img/icon-facebook.png) no-repeat;
+	background-position: 0 0;
+}
+
+.sprite li:first-child a:hover {
+	background-position: 0 -50px;
+}
+
+.sprite li:last-child a {
+	background: url(../img/icon-twitter.png) no-repeat;
+	background-position: 0 0;
+}
+
+.sprite li:last-child a:hover {
+	background-position: 0 -50px;
+}
+
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
@@ -455,6 +445,11 @@ footer {
 	margin: 0 auto;
 }
 
+.f-right {
+	float: right;
+}
+
+
 @media (min-width: 480px) {
 .flex {
 	display: -webkit-flex;
@@ -477,65 +472,20 @@ footer {
 .flex-item + .col-1-2 {
 	padding-right: 20px;
 }
-
 }
-
-
-.f-right {
-	float: right;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 480px) {
-	.wrapper {
-		width: 90%;
-	}
-	
-	
 	.col-1-4:nth-child(2), .col-1-7, .col-1-6:nth-child(3), .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-11, .col-1-12:nth-child(4), .col-1-12:nth-child(8) {
 		padding-right: 0;
 	}
 	
-	.col-1-7, .col-1-11, .col-1-4 {
+	.col-1-7, .col-1-11, .col-1-4, .col-2-3, .col-3-5, #about .col-1-2, #about .col-1-3 {
 		width: 100%;
 	}
 	
 	.col-1-6, .col-1-9 {
 		width: 33.33%;
-	}
-	
-	.col-2-3 {
-		width: 100%;
 	}
 	
 	.col-5-6 {
@@ -555,23 +505,20 @@ footer {
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */	
 footer [class*='f-'], .hero .f-right {
-	float: none;
-	margin: 0 auto;
 	text-align: center;
 }
-/* ----- 1.1 - Headings ----- */
-body>header .col-1-10 {
-	float: none;
-	margin: 0 auto;
+
+#work h3, #work p {
+	text-align: left;
 }
 
+/* ----- 1.1 - Headings ----- */
 h2, strong {
 	font-size: 3rem;
 	line-height: 3rem;
 }
 
 #work h3 {
-	text-align: left;
 	margin: 10px;
 }
 
@@ -581,7 +528,6 @@ p {
 }
 
 #work p {
-	text-align: left;
 	margin: 0 0 50px 0;
 }
 
@@ -628,25 +574,21 @@ footer li {
 	background-color: #F6BD46;
 }
 
-#about .col-1-2, #about .col-1-3 {
-	width: 100%;
-}
-
-#about .col-1-2.image {
+#about .col-1-2.image, body>header .col-1-10, footer [class*='f-'], .hero .f-right {
 	margin: 0 auto;
-	float: none;
 }
 
 footer .row>* {
-	float: none;
 	margin: 60px auto 0 auto;
+}
+
+#about .col-1-2.image, footer .row>*, body>header .col-1-10, footer [class*='f-'], .hero .f-right {
+	float: none;
 }
 
 footer .col-1-6.f-right {
 	width: 70%
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -662,10 +604,6 @@ footer .col-1-6.f-right {
 	width: 60%;
 	height: 130px;
 }
-
-
-
-
 }
 
 
