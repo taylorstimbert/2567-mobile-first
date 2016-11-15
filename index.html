@@ -9,6 +9,14 @@
 <title>Assignment 1</title>
 </head>
 
+<!-- Flex Notes
+
+On row add in flex class
+	Needs to be a class around your objects being balanced
+    
+Any background colors need to be WITHIN the flex  class
+    -->
+
 <body id="top">
 <!--Should btn class be on anchor or containing element?
 	If it is on the anchor, how can I target ul's containing buttons (for diplay: inline-block;) and set up a class for button scenarios that future updates need to use?-->
@@ -26,7 +34,7 @@
         </nav>
     </div>
     <div class="hero row wrapper">
-    	<div class="col-7-8 f-right">
+    	<div class="col-3-5 f-right">
             <!-- can't wrap in header tag b/c already inside of a header?-->
             <p><strong>We Design Things</strong></p>
             <p>Lorem ipsum dolor sit amet, indoctum dissentiet eam ne. Eum omnium docendi cu. Aliquid delenit an pri, ad mea nostrud nominavi menandri.</p>
@@ -47,6 +55,7 @@
         
     	<section class="col-1-4">
         	<header class="row">
+                <img src="img/icon-print.png" alt="" class="block-cntr">
                 <h3>Print Design</h3>
             </header>
             <p>Nam purto solet eu vero mediocrem hendrerit ad ius.</p>
@@ -88,8 +97,8 @@
         </header>
 
 <!-- JOHN DOE -->
-    <section class="row">
-    	<div class="col-1-2 f-left image"></div><!--image-->
+    <section class="flex row">
+    	<div class="col-1-2 image"></div><!--image-->
         <div class="bg-teal col-1-2 f-right">
         	<div class="block-cntr col-1-3">
                 <header>
@@ -103,11 +112,11 @@
         	</div>
         </div>
     </section>
-    
+
 <!-- JANE DOE -->
-    <section class="row">
-        <div class="col-1-2 f-right image"></div><!--image-->
-        <div class="bg-yllw col-1-2 f-left">
+    <section class="flex row">
+        <div class="col-1-2 flex-item image"></div><!--image-->
+        <div class="bg-yllw col-1-2">
         	<div class="block-cntr col-1-3">
                 <header>
                     <h3>Jane Doe</h3>
@@ -122,9 +131,9 @@
     </section> 
         
 <!-- JON SMITH -->
-    <section class="row">
-    	<div class="col-1-2 f-left image"></div><!--image-->
-        <div class="bg-teal col-1-2 f-right">
+    <section class="flex row">
+    	<div class="col-1-2 f-right image"></div><!--image-->
+        <div class="bg-teal col-1-2">
         	<div class="block-cntr col-1-3">
                 <header>
                     <h3>Jon Smith</h3>
@@ -139,9 +148,9 @@
     </section>
     
 <!-- MARY SMITH -->
-    <section class="row">
-    	<div class="col-1-2 f-right image"></div><!--image-->
-        <div class="bg-yllw f-left col-1-2">
+    <section class="flex row">
+    	<div class="col-1-2 flex-item image"></div><!--image-->
+        <div class="bg-yllw col-1-2">
         	<div class="block-cntr col-1-3">
                 <header>
                     <h3>Mary Smith</h3>
@@ -160,12 +169,12 @@
 <!-- ************ FOOTER ************ -->
 <footer class="bg-teal">
 	<div class="row wrapper">
-    	<div class="col-1-6 f-left"><h4><a href="#top"><img src="img/logo.png" alt="logo for oh! written in yellow bubble letters"></a></h4></div>
-        <nav class="col-2-3 f-left">
+    	<div class="col-1-6"><h4><a href="#top"><img src="img/logo.png" alt="logo for oh! written in yellow bubble letters"></a></h4></div>
+        <nav class="col-2-3">
         	<ul>
-            	<li><a href="#top" class="btn">Home</a></li>
-                <li><a href="#work" class="btn">Work</a></li>
-                <li><a href="#about" class="btn">About</a></li>
+            	<li><a href="#top" class="btn btn-hllw">Home</a></li>
+                <li><a href="#work" class="btn btn-hllw">Work</a></li>
+                <li><a href="#about" class="btn btn-hllw">About</a></li>
             </ul>
         </nav>
         <!--address tag?-->
